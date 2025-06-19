@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sonny's Spin & Suds - Laundry Pickup Request</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6f0f1;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            max-width: 500px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #003366;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+            text-align: left;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #003366;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #002244;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sonny's Spin & Suds</h1>
+        <p>Request Your Laundry Pickup Below</p>
+        <form action="https://formspree.io/f/mjkrekbb" method="POST">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="address">Pickup Address</label>
+            <textarea id="address" name="address" rows="3" required></textarea>
+
+            <label for="service">Preferred Service</label>
+            <select id="service" name="service" required>
+                <option value="">--Select--</option>
+                <option value="Standard">Standard (24–48 hrs)</option>
+                <option value="Express">Express (Same Day – Additional Fee)</option>
+            </select>
+
+            <label for="date">Pickup Date</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="notes">Additional Notes (optional)</label>
+            <textarea id="notes" name="notes" rows="3"></textarea>
+
+            <button type="submit">Submit Request</button>
+        </form>
+    </div>
+</body>
+</html>
